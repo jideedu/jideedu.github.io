@@ -11,6 +11,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Disable scroll-snap that causes auto-scrolling between sections */
+      html, body {
+        scroll-snap-type: none !important;
+      }
+      section, div[id] {
+        scroll-snap-align: none !important;
+        scroll-snap-stop: normal !important;
+      }
+    </style>
   </head>
   <body>
     <!-- BACK TO TOP -->
@@ -381,7 +391,7 @@
         <h2 class="reveal">Publications <span>&amp; citations</span></h2>
 
         <!-- Citation chart -->
-        <div class="chart-area reveal">
+        <div class="chart-area reveal" style="overflow: hidden;">
           <div class="chart-header">
             <div>
               <div class="chart-title">Citation growth</div>
@@ -389,7 +399,9 @@
             </div>
             <div class="chart-total">480<small>total citations</small></div>
           </div>
-          <canvas id="citation-chart"></canvas>
+          <div style="position: relative; height: 280px; width: 100%;">
+            <canvas id="citation-chart"></canvas>
+          </div>
         </div>
 
         <div class="pub-filters reveal">
@@ -1197,6 +1209,7 @@
             if (e.isIntersecting) {
               e.target.classList.add("in");
               if (e.target.closest("#hero")) runCounters();
+              observer.unobserve(e.target);
             }
           });
         },
@@ -1301,6 +1314,7 @@
           options: {
             responsive: true,
             maintainAspectRatio: false,
+            resizeDelay: 0,
             plugins: {
               legend: { display: false },
               tooltip: {
