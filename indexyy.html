@@ -1,0 +1,1585 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Jide Edu — Cybersecurity Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Disable scroll-snap that causes auto-scrolling between sections */
+      html,
+      body {
+        scroll-snap-type: none !important;
+      }
+      section,
+      div[id] {
+        scroll-snap-align: none !important;
+        scroll-snap-stop: normal !important;
+      }
+      /* Publication title links */
+      a.pub-link {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      a.pub-link:hover {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BACK TO TOP -->
+    <button
+      class="back-to-top"
+      id="btt"
+      aria-label="Back to top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
+
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-brand">
+        <div class="nav-dot"></div>
+        <span class="nav-name">Jide Edu, Ph.D.</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle theme">☀</button>
+      </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <div id="hero">
+      <canvas class="hero-canvas" id="hero-canvas"></canvas>
+      <div class="hero-inner">
+        <div>
+          <div class="hero-badge">
+            Lecturer in Cybersecurity · University of Strathclyde
+          </div>
+          <h1>Security &amp; privacy<br />at the <em>edge of AI</em></h1>
+          <p class="hero-lead">
+            I build automated systems to audit voice assistants, messaging
+            platforms, and LLM ecosystems — exposing privacy failures before
+            they reach millions of users.
+          </p>
+          <div class="hero-ctas">
+            <a href="#publications" class="btn-primary">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14,2 14,8 20,8" />
+              </svg>
+              Publications
+            </a>
+            <a href="mailto:jide.edu@strath.ac.uk" class="btn-outline">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email me
+            </a>
+            <a
+              href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+              target="_blank"
+              class="btn-outline"
+              >Pure ↗</a
+            >
+          </div>
+          <div class="hero-metrics reveal">
+            <div class="metric">
+              <div class="metric-n" id="cnt-citations">0<span>+</span></div>
+              <div class="metric-l">Citations</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-pubs">0</div>
+              <div class="metric-l">Publications</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-phd">0</div>
+              <div class="metric-l">PhD students</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-funding">£0<span>k+</span></div>
+              <div class="metric-l">Funding</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile card -->
+        <div class="hero-panel reveal reveal-d2">
+          <div class="panel-header">
+            <div class="panel-dots">
+              <span class="d1"></span><span class="d2"></span
+              ><span class="d3"></span>
+            </div>
+            <span class="panel-title">profile.json</span>
+          </div>
+          <div class="panel-body">
+            <div class="prof-row">
+              <div class="avatar">
+                <img src="img/Jide.jpg" alt="Dr. Jide Edu" />
+              </div>
+              <div>
+                <div class="prof-name">Dr. Jide Edu</div>
+                <div class="prof-sub">jide.edu@strath.ac.uk</div>
+              </div>
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              University of Strathclyde, Glasgow
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              0000-0003-1325-8740
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              Appointed: 01 April 2024
+            </div>
+            <div class="panel-tags">
+              <span class="ptag ptag-blue">AI Security</span>
+              <span class="ptag ptag-blue">Privacy</span>
+              <span class="ptag ptag-teal">Voice Assistants</span>
+              <span class="ptag ptag-teal">Identity Systems</span>
+              <span class="ptag ptag-amber">Machine Learning</span>
+              <span class="ptag ptag-amber">FHEA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ RESEARCH ═══ -->
+    <section id="research" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Research focus</p>
+        <h2 class="reveal">What I <span>work on</span></h2>
+        <div class="research-grid">
+          <div class="rc reveal reveal-d1">
+            <div class="rc-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+            </div>
+            <div class="rc-title">Voice assistant security</div>
+            <div class="rc-desc">
+              Evaluating Amazon Alexa, Google Assistant, Siri, and Mycroft for
+              privacy vulnerabilities in third-party skill ecosystems — first to
+              comprehensively map the attack surface.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d2">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--teal-dim);
+                border-color: rgba(45, 212, 191, 0.3);
+                color: var(--teal);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <div class="rc-title">AI &amp; LLM privacy</div>
+            <div class="rc-desc">
+              Measuring personalisation, data collection, and regulatory
+              compliance in LLM-powered ecosystems. Forthcoming paper currently
+              under review.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d3">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--amber-dim);
+                border-color: rgba(245, 158, 11, 0.3);
+                color: var(--amber);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="rc-title">National identity systems</div>
+            <div class="rc-desc">
+              Risk assessment frameworks for national electronic identity
+              systems, examining the social, economic, and political stakes of
+              large-scale NeID compromise.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d1">
+            <div
+              class="rc-icon"
+              style="
+                background: rgba(168, 85, 247, 0.1);
+                border-color: rgba(168, 85, 247, 0.25);
+                color: #a855f7;
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                />
+              </svg>
+            </div>
+            <div class="rc-title">Messaging platform security</div>
+            <div class="rc-desc">
+              Automated static and dynamic analysis of chatbots on Discord,
+              Slack, WhatsApp, and Teams — identifying admin-permission
+              overreach and missing privacy policies at scale.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d2">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--red-dim);
+                border-color: rgba(248, 113, 113, 0.25);
+                color: var(--red);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <div class="rc-title">Misinformation in AI apps</div>
+            <div class="rc-desc">
+              Studying how third-party voice applications can be weaponised for
+              misinformation — a gap in prior work that focused only on
+              input-side privacy issues.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d3">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--green-dim);
+                border-color: rgba(74, 222, 128, 0.2);
+                color: var(--green);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="rc-title">Human factors &amp; usable security</div>
+            <div class="rc-desc">
+              Understanding developer challenges and user behaviour in voice and
+              AI ecosystems — Tier 1 A★ USENIX paper on developer risk,
+              liability, and security trade-offs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PUBLICATIONS ═══ -->
+    <section id="publications" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Research outputs</p>
+        <h2 class="reveal">Publications <span>&amp; citations</span></h2>
+
+        <!-- Citation chart -->
+        <div class="chart-area reveal" style="overflow: hidden">
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">Citation growth</div>
+              <div class="chart-sub">Cumulative citations since 2020</div>
+            </div>
+            <div class="chart-total">492<small>total citations</small></div>
+          </div>
+          <div style="position: relative; height: 280px; width: 100%">
+            <canvas id="citation-chart"></canvas>
+          </div>
+        </div>
+
+        <div class="pub-filters reveal">
+          <button class="pf-btn active" data-filter="all">All</button>
+          <button class="pf-btn" data-filter="journal">Journal articles</button>
+          <button class="pf-btn" data-filter="conference">
+            Conference papers
+          </button>
+          <button class="pf-btn" data-filter="tier1">Tier 1 A★</button>
+          <button class="pf-btn" data-filter="voice">Voice assistants</button>
+          <button class="pf-btn" data-filter="privacy">Privacy</button>
+        </div>
+
+        <div class="pub-list">
+          <!-- 1 -->
+          <div class="pub-item reveal" data-tags="journal voice privacy">
+            <div class="pub-yr">2020</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3412383"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Smart home personal assistants: a security and privacy review
+                  ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                ACM Computing Surveys (CSUR), vol. 53, no. 6, pp. 1–36
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-green">Journal · IF 23.8</span
+                ><span class="tag tag-teal">Survey</span
+                ><span class="tag tag-teal">Smart home</span
+                ><span class="tag tag-teal">Privacy</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >299
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="pub-item reveal" data-tags="journal voice privacy">
+            <div class="pub-yr">2021</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://ieeexplore.ieee.org/abstract/document/9619970"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >SkillVet: automated traceability analysis of Amazon Alexa
+                  skills ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                IEEE Transactions on Dependable and Secure Computing, vol. 20,
+                no. 1, pp. 161–175
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-green">Journal · IF 7.3</span
+                ><span class="tag tag-teal">Machine learning</span
+                ><span class="tag tag-teal">Privacy</span
+                ><span class="tag tag-teal">Alexa</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >68
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="pub-item reveal" data-tags="conference tier1 privacy">
+            <div class="pub-yr">2022</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://dl.acm.org/doi/abs/10.1145/3517745.3561433"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Exploring the security and privacy risks of chatbots in
+                  messaging services ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                22nd ACM Internet Measurement Conference (IMC '22), pp. 581–588
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Chatbots</span
+                ><span class="tag tag-teal">Messaging</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >49
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div
+            class="pub-item reveal"
+            data-tags="conference tier1 voice privacy"
+          >
+            <div class="pub-yr">2022</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://dl.acm.org/doi/10.1145/3485447.3512289"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Measuring Alexa skill privacy practices across three years
+                  ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                The Web Conference (WWW '22), pp. 670–680
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Longitudinal study</span
+                ><span class="tag tag-teal">Privacy measurement</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >44
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="pub-item reveal" data-tags="thesis voice privacy">
+            <div class="pub-yr">2022</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://kclpure.kcl.ac.uk/portal/files/181475537/2022_Edu_Jide_1787928_ethesis.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Assessing and measuring the privacy practices of voice
+                  assistant applications ↗</a
+                >
+              </div>
+              <div class="pub-venue">PhD Thesis, King's College London</div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Thesis</span
+                ><span class="tag tag-teal">Voice assistants</span
+                ><span class="tag tag-teal">Privacy</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >6
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div
+            class="pub-item reveal"
+            data-tags="conference tier1 voice privacy"
+          >
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://www.usenix.org/conference/usenixsecurity24/presentation/seymour"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Voice app developer experiences with Alexa and Google
+                  Assistant: juggling risks, liability, and security ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                33rd USENIX Security Symposium (USENIX Security '24)
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Voice assistants</span
+                ><span class="tag tag-teal">Human factors</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >10
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="pub-item reveal" data-tags="conference privacy">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://ieeexplore.ieee.org/abstract/document/10324724/"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >An impact and risk assessment framework for national
+                  electronic identity (eID) systems ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                International Conference on AI and the Digital Economy (CADE
+                2023), pp. 124–133
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Identity systems</span
+                ><span class="tag tag-teal">Risk assessment</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >5
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="pub-item reveal" data-tags="conference privacy">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://digital-library.theiet.org/doi/abs/10.1049/icp.2023.2591"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Exploring the risks and challenges of national electronic
+                  identity (NeID) system ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                IET Conference Proceedings CP846 2023, no. 14, pp. 118–123
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Identity systems</span
+                ><span class="tag tag-teal">Risk</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >5
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="pub-item reveal" data-tags="conference voice">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://dl.acm.org/doi/abs/10.1145/3571884.3604307"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Misinformation in third-party voice applications ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                5th International Conference on Conversational User Interfaces
+                (CUI '23), ACM
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Misinformation</span
+                ><span class="tag tag-teal">Voice AI</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >4
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="pub-item reveal" data-tags="conference privacy">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://www.researchsquare.com/article/rs-3682861/v1"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Moving beyond frameworks: stakeholders' perceptions of risk
+                  assessment in national electronic identity system ↗</a
+                >
+              </div>
+              <div class="pub-venue">Conference paper, 2023</div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Identity systems</span
+                ><span class="tag tag-teal">Stakeholders</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >1
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="pub-item reveal" data-tags="conference adversarial ml">
+            <div class="pub-yr">2025</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://link.springer.com/chapter/10.1007/978-3-032-01799-4_11"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Using traditional image kernels and image processing
+                  techniques to harden convolutional neural networks against
+                  adversarial attacks ↗</a
+                >
+              </div>
+              <div class="pub-venue">
+                International Conference on Applied Cryptography and Network
+                Security (ACNS), pp. 185–203
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Adversarial ML</span
+                ><span class="tag tag-teal">Neural networks</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >1
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="pub-item reveal" data-tags="other privacy ai">
+            <div class="pub-yr">2024</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                <a
+                  href="https://theconversation.com/apple-insists-its-chatgpt-tie-up-will-protect-users-privacy-here-are-the-questions-it-must-answer-first-232498"
+                  target="_blank"
+                  rel="noopener"
+                  class="pub-link"
+                  >Apple insists its ChatGPT tie-up will protect users' privacy:
+                  here are the questions it must answer first ↗</a
+                >
+              </div>
+              <div class="pub-venue">Published article, 2024</div>
+              <div class="pub-tags">
+                <span class="tag tag-teal">AI Privacy</span
+                ><span class="tag tag-teal">LLMs</span
+                ><span class="tag tag-teal">Commentary</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >—
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Career</p>
+        <h2 class="reveal">Experience <span>&amp; education</span></h2>
+        <div class="tl-wrap">
+          <div>
+            <div class="tl-col-title reveal">Employment</div>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-period">2023 — present</div>
+                <div class="tl-role">Lecturer in Cybersecurity</div>
+                <div class="tl-place">University of Strathclyde, Glasgow</div>
+                <div class="tl-detail">
+                  Leading AI security research, teaching postgraduate
+                  cybersecurity modules, supervising 6 PhD students, and serving
+                  as Strathclyde Academic Lead for EC-Council and CIISec
+                  partnerships.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-period">2022 — 2023</div>
+                <div class="tl-role">
+                  Postdoctoral Researcher — Cyber Risk Analyst
+                </div>
+                <div class="tl-place">Alan Turing Institute, UK</div>
+                <div class="tl-detail">
+                  Cyber risk analysis and AI security research at the UK's
+                  national institute for data science and AI.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-period">2020 — 2022</div>
+                <div class="tl-role">Research Assistant</div>
+                <div class="tl-place">
+                  Department of Informatics, King's College London
+                </div>
+                <div class="tl-detail">
+                  Built SkillVet — an automated ML tool for privacy assessment.
+                  Made responsible disclosure to Amazon for 675
+                  privacy-violating Alexa skills. ICO-funded project.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d3">
+                <div class="tl-period">2018 — 2022</div>
+                <div class="tl-role">Teaching Assistant &amp; Tutor</div>
+                <div class="tl-place">
+                  King's College London / Brilliant Club
+                </div>
+                <div class="tl-detail">
+                  Small- and large-group instruction across network security,
+                  cryptography, and computer forensics modules.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="tl-col-title reveal">Education</div>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-period">2018 — 2022</div>
+                <div class="tl-role">Ph.D. Computer Science</div>
+                <div class="tl-place">King's College London, UK</div>
+                <div class="tl-detail">
+                  Thesis: Assessing and Measuring the Privacy Practices of Voice
+                  Assistant Applications. Fully funded by £130,000 PTDF
+                  Scholarship.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-period">2014 — 2015</div>
+                <div class="tl-role">M.Sc. Cybersecurity</div>
+                <div class="tl-place">Lancaster University, UK</div>
+                <div class="tl-detail">
+                  Advanced exposure to cybersecurity with a research project on
+                  cloud computing. Funded by £30,000 NITDEF Scholarship.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-period">2005 — 2010</div>
+                <div class="tl-role">B.Sc. Computer Science</div>
+                <div class="tl-place">Olabisi Onabanjo University, Nigeria</div>
+                <div class="tl-detail">
+                  Core computer science curriculum with a final-year project on
+                  object-oriented programming languages.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TEACHING ═══ -->
+    <section id="teaching" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Teaching</p>
+        <h2 class="reveal">Courses <span>&amp; supervision</span></h2>
+        <div class="teaching-metrics reveal">
+          <div class="tm-card">
+            <div class="tm-n">22</div>
+            <div class="tm-l">MSc dissertations</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">6</div>
+            <div class="tm-l">BSc dissertations</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">6</div>
+            <div class="tm-l">Current PhD students</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">FHEA</div>
+            <div class="tm-l">HEA Fellow</div>
+          </div>
+        </div>
+        <div class="course-tabs reveal">
+          <button class="ct-btn active" data-tab="strath">Strathclyde</button>
+          <button class="ct-btn" data-tab="kcl">King's College London</button>
+        </div>
+        <div class="courses-pane active" id="tab-strath">
+          <div class="course-card">
+            <div class="course-code">CS885</div>
+            <div>
+              <div class="course-name">
+                Vulnerability Assessment and Security Testing
+              </div>
+              <div class="course-meta">≈ 40 students · 2025–present</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS810</div>
+            <div>
+              <div class="course-name">
+                Compliance and Operational Security Management
+              </div>
+              <div class="course-meta">≈ 21 students · 2023–present</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS807</div>
+            <div>
+              <div class="course-name">
+                Graduate Apprenticeship — Vulnerability Assessment
+              </div>
+              <div class="course-meta">≈ 21 students · 2023–present</div>
+            </div>
+          </div>
+        </div>
+        <div class="courses-pane" id="tab-kcl">
+          <div class="course-card">
+            <div class="course-code">7CCSMNSE</div>
+            <div>
+              <div class="course-name">Network Security</div>
+              <div class="course-meta">≈ 30 students · 2019–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">6CCS3CIS</div>
+            <div>
+              <div class="course-name">
+                Cryptography and Information Security
+              </div>
+              <div class="course-meta">≈ 30 students · 2021–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">7CCSMCIS</div>
+            <div>
+              <div class="course-name">Computer Forensics and Cybercrime</div>
+              <div class="course-meta">≈ 30 students · 2019–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">4CCS1FC1</div>
+            <div>
+              <div class="course-name">Foundational Computing</div>
+              <div class="course-meta">≈ 70 students · 2018–2021</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">4CCS1PPA</div>
+            <div>
+              <div class="course-name">Introduction to Programming</div>
+              <div class="course-meta">≈ 80 students · 2018–2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ AWARDS ═══ -->
+    <section id="awards" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Funding &amp; recognition</p>
+        <h2 class="reveal">Awards <span>&amp; grants</span></h2>
+        <div class="awards-grid">
+          <div class="award-card reveal">
+            <div class="award-yr">2024</div>
+            <div class="award-title">
+              John Anderson Research Studentship Scheme (JARSS) Grant —
+              University of Strathclyde
+            </div>
+            <div class="award-amt" style="color: var(--accent)">JARSS</div>
+          </div>
+          <div class="award-card reveal reveal-d1">
+            <div class="award-yr">2023</div>
+            <div class="award-title">Strathclyde University Starter Grant</div>
+            <div class="award-amt">£10,000</div>
+          </div>
+          <div class="award-card reveal reveal-d2">
+            <div class="award-yr">2021</div>
+            <div class="award-title">
+              ICO Research Grant — Evaluating third-party smart home assistant
+              developers
+            </div>
+            <div class="award-amt">£45,000</div>
+          </div>
+          <div class="award-card reveal">
+            <div class="award-yr">2018</div>
+            <div class="award-title">
+              Petroleum Technology Development Fund (PTDF) Scholarship Award
+            </div>
+            <div class="award-amt">£130,000</div>
+          </div>
+          <div class="award-card reveal reveal-d1">
+            <div class="award-yr">2014</div>
+            <div class="award-title">
+              National Information Technology Development Education Trust Fund
+              (NITDEF) Scholarship
+            </div>
+            <div class="award-amt">£30,000</div>
+          </div>
+          <div
+            class="award-card reveal reveal-d2"
+            style="border-color: var(--border2)"
+          >
+            <div class="award-yr" style="color: var(--text3)">Pending</div>
+            <div class="award-title">
+              ARIA Grant — Framework for Embodied and Algorithmic Trust (FEAT):
+              AI, Physical Cryptography, and the Ethics of Secure Autonomy
+            </div>
+            <div
+              class="award-amt"
+              style="font-size: 1.1rem; color: var(--text2)"
+            >
+              £19,960
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Get in touch</p>
+        <h2 class="reveal">Contact <span>&amp; links</span></h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Direct contact</h3>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:jide.edu@strath.ac.uk">jide.edu@strath.ac.uk</a>
+            </div>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Department of Computer and Information Sciences, University of
+              Strathclyde, Glasgow, UK
+            </div>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              ORCID:
+              <a href="https://orcid.org/0000-0003-1325-8740" target="_blank"
+                >0000-0003-1325-8740</a
+              >
+            </div>
+            <div
+              style="
+                margin-top: 1.25rem;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+                target="_blank"
+                class="btn-primary"
+                style="font-size: 13px; padding: 8px 16px"
+                >Pure Portal ↗</a
+              >
+              <a
+                href="https://scholar.google.com"
+                target="_blank"
+                class="btn-outline"
+                style="font-size: 13px; padding: 8px 16px"
+                >Google Scholar ↗</a
+              >
+            </div>
+          </div>
+          <div class="contact-card reveal reveal-d1">
+            <h3>Professional memberships</h3>
+            <div class="memberships">
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Expert Fellow, SPRITE+ Security &amp; Privacy NetworkPlus
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Fellow of the Higher Education Academy (FHEA)
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Member, EPSRC Peer Review College
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Member, Research Innovation Scotland (RIS)
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--accent)"></div>
+                Member, RBOC (Resilience Beyond Observed Capabilities)
+                NetworkPlus
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--accent)"></div>
+                Member, CRANE Cyber Security Research Network
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--amber)"></div>
+                STEM Ambassador
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--amber)"></div>
+                Centering Black Scholarship in STEM network
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div style="background: var(--bg2); border-top: 1px solid var(--border)">
+      <footer>
+        <span>© 2026 Jide Edu, Ph.D. · University of Strathclyde</span>
+        <div class="footer-links">
+          <a
+            href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+            target="_blank"
+            >Pure Portal</a
+          >
+          <a href="https://orcid.org/0000-0003-1325-8740" target="_blank"
+            >ORCID</a
+          >
+          <a href="https://scholar.google.com" target="_blank"
+            >Google Scholar</a
+          >
+          <a href="mailto:jide.edu@strath.ac.uk">Email</a>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+      // ─── THEME TOGGLE ───
+      const root = document.documentElement;
+      const btn = document.getElementById("theme-toggle");
+      const navToggle = document.getElementById("nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        btn.textContent = next === "dark" ? "☀" : "☾";
+        updateChart();
+      });
+      navToggle?.addEventListener("click", () => {
+        navLinks?.classList.toggle("open");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () =>
+          navLinks?.classList.remove("open"),
+        );
+      });
+
+      // ─── HERO CANVAS PARTICLES ───
+      (function () {
+        const canvas = document.getElementById("hero-canvas");
+        const ctx = canvas.getContext("2d");
+        let W,
+          H,
+          particles = [];
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = canvas.parentElement.offsetHeight;
+        }
+        resize();
+        window.addEventListener("resize", () => {
+          resize();
+          init();
+        });
+        function Particle() {
+          this.x = Math.random() * W;
+          this.y = Math.random() * H;
+          this.vx = (Math.random() - 0.5) * 0.3;
+          this.vy = (Math.random() - 0.5) * 0.3;
+          this.r = Math.random() * 1.5 + 0.5;
+        }
+        function init() {
+          particles = [];
+          for (let i = 0; i < 80; i++) particles.push(new Particle());
+        }
+        init();
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          const isDark = root.dataset.theme !== "light";
+          particles.forEach((p) => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) p.x = W;
+            if (p.x > W) p.x = 0;
+            if (p.y < 0) p.y = H;
+            if (p.y > H) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = isDark
+              ? "rgba(79,142,255,0.35)"
+              : "rgba(79,142,255,0.2)";
+            ctx.fill();
+          });
+          // connections
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x,
+                dy = particles[i].y - particles[j].y;
+              const d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 120) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = isDark
+                  ? `rgba(79,142,255,${0.12 * (1 - d / 120)})`
+                  : `rgba(79,142,255,${0.07 * (1 - d / 120)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+        draw();
+      })();
+
+      // ─── COUNTER ANIMATION ───
+      function animateCounter(el, target, suffix = "", duration = 1600) {
+        const isString = typeof target === "string";
+        if (isString) {
+          el.textContent = target;
+          return;
+        }
+        let start = 0,
+          startTime = null;
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          const p = Math.min((ts - startTime) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 4);
+          const val = Math.floor(ease * target);
+          el.innerHTML = val + (suffix ? `<span>${suffix}</span>` : "");
+          if (p < 1) requestAnimationFrame(step);
+          else el.innerHTML = target + (suffix ? `<span>${suffix}</span>` : "");
+        }
+        requestAnimationFrame(step);
+      }
+      let counted = false;
+      function runCounters() {
+        if (counted) return;
+        counted = true;
+        animateCounter(document.getElementById("cnt-citations"), 492, "+");
+        animateCounter(document.getElementById("cnt-pubs"), 12, "");
+        animateCounter(document.getElementById("cnt-phd"), 6, "");
+        animateCounter(document.getElementById("cnt-funding"), 225, "k+");
+      }
+
+      // ─── SCROLL REVEAL + NAV + BACK-TO-TOP ───
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              if (e.target.closest("#hero")) runCounters();
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      window.addEventListener("scroll", () => {
+        const btt = document.getElementById("btt");
+        btt.classList.toggle("show", window.scrollY > 600);
+        // active nav
+        const sections = [
+          "research",
+          "publications",
+          "experience",
+          "teaching",
+          "awards",
+          "contact",
+        ];
+        let cur = "";
+        sections.forEach((id) => {
+          const sec = document.getElementById(id);
+          if (sec && sec.getBoundingClientRect().top <= 80) cur = id;
+        });
+        document.querySelectorAll(".nav-links a").forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
+        });
+      });
+
+      // ─── PUB FILTERS ───
+      document.querySelectorAll(".pf-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".pf-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          const f = this.dataset.filter;
+          document.querySelectorAll(".pub-item").forEach((item) => {
+            const tags = item.dataset.tags || "";
+            if (f === "all" || tags.includes(f)) {
+              item.classList.remove("hidden");
+            } else {
+              item.classList.add("hidden");
+            }
+          });
+        });
+      });
+
+      // ─── COURSE TABS ───
+      document.querySelectorAll(".ct-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".ct-btn")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".courses-pane")
+            .forEach((p) => p.classList.remove("active"));
+          this.classList.add("active");
+          document
+            .getElementById("tab-" + this.dataset.tab)
+            .classList.add("active");
+        });
+      });
+
+      // ─── CITATION CHART ───
+      let citChart = null;
+      function getChartColors() {
+        const isDark = root.dataset.theme !== "light";
+        return {
+          line: isDark ? "rgba(79,142,255,1)" : "rgba(59,119,228,1)",
+          fill: isDark ? "rgba(79,142,255,0.15)" : "rgba(79,142,255,0.08)",
+          grid: isDark ? "rgba(99,152,255,0.08)" : "rgba(0,0,0,0.05)",
+          text: isDark ? "rgba(154,170,200,0.8)" : "rgba(61,79,114,0.8)",
+          point: isDark ? "#4F8EFF" : "#3B77E4",
+        };
+      }
+      function buildChart() {
+        const c = getChartColors();
+        const ctx = document.getElementById("citation-chart").getContext("2d");
+        if (citChart) citChart.destroy();
+        citChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["2020", "2021", "2022", "2023", "2024", "2025", "2026"],
+            datasets: [
+              {
+                label: "Citations",
+                data: [12, 35, 95, 195, 340, 445, 492],
+                borderColor: c.line,
+                borderWidth: 2,
+                backgroundColor: c.fill,
+                fill: true,
+                tension: 0.45,
+                pointBackgroundColor: c.point,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            resizeDelay: 0,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: "rgba(15,23,42,0.9)",
+                titleColor: "#e8eeff",
+                bodyColor: "#9aaac8",
+                borderColor: "rgba(79,142,255,0.3)",
+                borderWidth: 1,
+                padding: 10,
+                callbacks: { label: (ctx) => `${ctx.parsed.y} citations` },
+              },
+            },
+            scales: {
+              x: {
+                grid: { color: c.grid },
+                ticks: {
+                  color: c.text,
+                  font: { size: 11, family: "'DM Sans',sans-serif" },
+                },
+              },
+              y: {
+                grid: { color: c.grid },
+                ticks: {
+                  color: c.text,
+                  font: { size: 11, family: "'DM Sans',sans-serif" },
+                },
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+      function updateChart() {
+        setTimeout(buildChart, 50);
+      }
+      window.addEventListener("load", buildChart);
+    </script>
+  </body>
+</html>
