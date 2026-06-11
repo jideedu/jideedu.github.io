@@ -1,649 +1,1342 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
-    <!-- Basic Page Needs
-    ================================================== -->
-    <meta charset="u8">
-    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jide Edu Resume</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="portfolio, agency, bootstrap theme, mobile responsive, template, personal">
-    <meta name="author" content="webthemez.com">
-    
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="" type="image/x-icon"> 
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
-
-    <!-- Nivo Lightbox
-    ================================================== -->
-    <link rel="stylesheet" href="css/nivo-lightbox.css" >
-    <link rel="stylesheet" href="css/nivo_lightbox_themes/default/default.css">
-
-    <!-- Slider
-    ================================================== -->
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-
-    <!-- Stylesheet
-    ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-    <!-- Google Fonts
-    ================================================== -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Jide Edu — Cybersecurity Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- BACK TO TOP -->
+    <button
+      class="back-to-top"
+      id="btt"
+      aria-label="Back to top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
 
-    <!-- Main Navigation 
-    ================================================== -->
-    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img src="img/logo.png" alt="..."></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#home" class="scroll">Home</a></li>
-                <li><a href="#whatIdo" class="scroll">What I Do</a></li>
-                <li><a href="#about" class="scroll">About</a></li>
-                <li><a href="#works" class="scroll">Works</a></li>
-                <li><a href="#experience" class="scroll">Experience</a></li> 
-                <li><a href="#contact" class="scroll">Contact</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-brand">
+        <div class="nav-dot"></div>
+        <span class="nav-name">Jide Edu, Ph.D.</span>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Toggle theme">☀</button>
+      </div>
     </nav>
 
-    <!-- Home Section
-    ================================================== -->
-    <section id="home">
-        <div class="overlay"> <!-- Overlay Color -->
-            <div class="container"> <!-- container -->
-                <div class="content-heading text-center"> <!-- Input Your Home Content Here -->
-                    <h1>Hi, I am Jide Edu</br>
-                    A Security and Privacy Researcher</h1>
-                    <p class="lead">I Love to create beautiful and amazing Websites.</p>
-                    <a href="#works" class="scroll goto-btn">Download Resume</a> <!-- Link to your portfolio section -->
-                </div><!-- End Input Your Home Content Here -->
-            </div> <!-- end container -->
-        </div><!-- End Overlay Color -->
+    <!-- ═══ HERO ═══ -->
+    <div id="hero">
+      <canvas class="hero-canvas" id="hero-canvas"></canvas>
+      <div class="hero-inner">
+        <div>
+          <div class="hero-badge">
+            Lecturer in Cybersecurity · University of Strathclyde
+          </div>
+          <h1>Security &amp; privacy<br />at the <em>edge of AI</em></h1>
+          <p class="hero-lead">
+            I build automated systems to audit voice assistants, messaging
+            platforms, and LLM ecosystems — exposing privacy failures before
+            they reach millions of users.
+          </p>
+          <div class="hero-ctas">
+            <a href="#publications" class="btn-primary">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14,2 14,8 20,8" />
+              </svg>
+              Publications
+            </a>
+            <a href="mailto:jide.edu@strath.ac.uk" class="btn-outline">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              Email me
+            </a>
+            <a
+              href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+              target="_blank"
+              class="btn-outline"
+              >Pure ↗</a
+            >
+          </div>
+          <div class="hero-metrics reveal">
+            <div class="metric">
+              <div class="metric-n" id="cnt-citations">0<span>+</span></div>
+              <div class="metric-l">Citations</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-pubs">0</div>
+              <div class="metric-l">Publications</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-phd">0</div>
+              <div class="metric-l">PhD students</div>
+            </div>
+            <div class="metric">
+              <div class="metric-n" id="cnt-funding">£0<span>k+</span></div>
+              <div class="metric-l">Funding</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile card -->
+        <div class="hero-panel reveal reveal-d2">
+          <div class="panel-header">
+            <div class="panel-dots">
+              <span class="d1"></span><span class="d2"></span
+              ><span class="d3"></span>
+            </div>
+            <span class="panel-title">profile.json</span>
+          </div>
+          <div class="panel-body">
+            <div class="prof-row">
+              <div class="avatar">
+                <img src="img/Jide.jpg" alt="Dr. Jide Edu" />
+              </div>
+              <div>
+                <div class="prof-name">Dr. Jide Edu</div>
+                <div class="prof-sub">jide.edu@strath.ac.uk</div>
+              </div>
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              University of Strathclyde, Glasgow
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              0000-0003-1325-8740
+            </div>
+            <div class="panel-row">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              Appointed: 01 April 2024
+            </div>
+            <div class="panel-tags">
+              <span class="ptag ptag-blue">AI Security</span>
+              <span class="ptag ptag-blue">Privacy</span>
+              <span class="ptag ptag-teal">Voice Assistants</span>
+              <span class="ptag ptag-teal">Identity Systems</span>
+              <span class="ptag ptag-amber">Machine Learning</span>
+              <span class="ptag ptag-amber">FHEA</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Intro Section
-    ================================================== -->
-    <section id="intro">
-        <div class="container"> <!-- container -->
-            <div class="row"> <!-- row -->
+    <!-- ═══ RESEARCH ═══ -->
+    <section id="research" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Research focus</p>
+        <h2 class="reveal">What I <span>work on</span></h2>
+        <div class="research-grid">
+          <div class="rc reveal reveal-d1">
+            <div class="rc-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                <line x1="12" y1="19" x2="12" y2="23" />
+                <line x1="8" y1="23" x2="16" y2="23" />
+              </svg>
+            </div>
+            <div class="rc-title">Voice assistant security</div>
+            <div class="rc-desc">
+              Evaluating Amazon Alexa, Google Assistant, Siri, and Mycroft for
+              privacy vulnerabilities in third-party skill ecosystems — first to
+              comprehensively map the attack surface.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d2">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--teal-dim);
+                border-color: rgba(45, 212, 191, 0.3);
+                color: var(--teal);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <div class="rc-title">AI &amp; LLM privacy</div>
+            <div class="rc-desc">
+              Measuring personalisation, data collection, and regulatory
+              compliance in LLM-powered ecosystems. Forthcoming paper currently
+              under review.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d3">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--amber-dim);
+                border-color: rgba(245, 158, 11, 0.3);
+                color: var(--amber);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="rc-title">National identity systems</div>
+            <div class="rc-desc">
+              Risk assessment frameworks for national electronic identity
+              systems, examining the social, economic, and political stakes of
+              large-scale NeID compromise.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d1">
+            <div
+              class="rc-icon"
+              style="
+                background: rgba(168, 85, 247, 0.1);
+                border-color: rgba(168, 85, 247, 0.25);
+                color: #a855f7;
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                />
+              </svg>
+            </div>
+            <div class="rc-title">Messaging platform security</div>
+            <div class="rc-desc">
+              Automated static and dynamic analysis of chatbots on Discord,
+              Slack, WhatsApp, and Teams — identifying admin-permission
+              overreach and missing privacy policies at scale.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d2">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--red-dim);
+                border-color: rgba(248, 113, 113, 0.25);
+                color: var(--red);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <div class="rc-title">Misinformation in AI apps</div>
+            <div class="rc-desc">
+              Studying how third-party voice applications can be weaponised for
+              misinformation — a gap in prior work that focused only on
+              input-side privacy issues.
+            </div>
+          </div>
+          <div class="rc reveal reveal-d3">
+            <div
+              class="rc-icon"
+              style="
+                background: var(--green-dim);
+                border-color: rgba(74, 222, 128, 0.2);
+                color: var(--green);
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="rc-title">Human factors &amp; usable security</div>
+            <div class="rc-desc">
+              Understanding developer challenges and user behaviour in voice and
+              AI ecosystems — Tier 1 A★ USENIX paper on developer risk,
+              liability, and security trade-offs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="col-md-8 col-md-offset-2"> 
-                     <h1>I Love to create beautiful Websites.</h1>
-                    <p class="lead">Please go through my Profile.</p>
+    <!-- ═══ PUBLICATIONS ═══ -->
+    <section id="publications" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Research outputs</p>
+        <h2 class="reveal">Publications <span>&amp; citations</span></h2>
+
+        <!-- Citation chart -->
+        <div class="chart-area reveal">
+          <div class="chart-header">
+            <div>
+              <div class="chart-title">Citation growth</div>
+              <div class="chart-sub">Cumulative citations since 2020</div>
+            </div>
+            <div class="chart-total">480<small>total citations</small></div>
+          </div>
+          <canvas id="citation-chart"></canvas>
+        </div>
+
+        <div class="pub-filters reveal">
+          <button class="pf-btn active" data-filter="all">All</button>
+          <button class="pf-btn" data-filter="journal">Journal articles</button>
+          <button class="pf-btn" data-filter="conference">
+            Conference papers
+          </button>
+          <button class="pf-btn" data-filter="tier1">Tier 1 A★</button>
+          <button class="pf-btn" data-filter="voice">Voice assistants</button>
+          <button class="pf-btn" data-filter="privacy">Privacy</button>
+        </div>
+
+        <div class="pub-list">
+          <div class="pub-item reveal" data-tags="conference adversarial ml">
+            <div class="pub-yr">2026</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Using traditional image kernels and image processing techniques
+                to harden convolutional neural networks against adversarial
+                attacks
+              </div>
+              <div class="pub-venue">
+                Applied Cryptography and Network Security Workshops (Springer),
+                pp. 185–203
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Adversarial ML</span
+                ><span class="tag tag-teal">Neural networks</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >0
+            </div>
+          </div>
+
+          <div
+            class="pub-item reveal"
+            data-tags="conference tier1 voice privacy"
+          >
+            <div class="pub-yr">2024</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Voice application developer experiences with Alexa and Google
+                Assistant: juggling risks, liability, and security
+              </div>
+              <div class="pub-venue">33rd USENIX Security Symposium, 2024</div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Voice assistants</span
+                ><span class="tag tag-teal">Human factors</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >n/a
+            </div>
+          </div>
+
+          <div class="pub-item reveal" data-tags="journal voice privacy">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                SkillVet: Automated traceability analysis of Amazon Alexa skills
+              </div>
+              <div class="pub-venue">
+                IEEE Transactions on Dependable and Secure Computing, vol. 20,
+                no. 1, pp. 161–175
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-green">Journal · IF 7.3</span
+                ><span class="tag tag-teal">Machine learning</span
+                ><span class="tag tag-teal">Privacy</span
+                ><span class="tag tag-teal">Alexa</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >19
+            </div>
+          </div>
+
+          <div class="pub-item reveal" data-tags="conference voice">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Misinformation in third-party voice applications
+              </div>
+              <div class="pub-venue">
+                5th International Conference on Conversational User Interfaces
+                (CUI '23), ACM
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Misinformation</span
+                ><span class="tag tag-teal">Voice AI</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >4
+            </div>
+          </div>
+
+          <div class="pub-item reveal" data-tags="conference privacy">
+            <div class="pub-yr">2023</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                An impact and risk assessment framework for national electronic
+                identity (eID) systems
+              </div>
+              <div class="pub-venue">
+                International Conference on AI and the Digital Economy (CADE
+                2023), pp. 124–133
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Identity systems</span
+                ><span class="tag tag-teal">Risk assessment</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >1
+            </div>
+          </div>
+
+          <div
+            class="pub-item reveal"
+            data-tags="conference tier1 voice privacy"
+          >
+            <div class="pub-yr">2022</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Measuring Alexa skill privacy practices across three years
+              </div>
+              <div class="pub-venue">The Web Conference (WWW '22), ACM</div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Longitudinal study</span
+                ><span class="tag tag-teal">Privacy measurement</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >45+
+            </div>
+          </div>
+
+          <div class="pub-item reveal" data-tags="conference tier1 privacy">
+            <div class="pub-yr">2022</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Exploring the security and privacy risks of chatbots in
+                messaging services
+              </div>
+              <div class="pub-venue">
+                22nd ACM Internet Measurement Conference (IMC '22), Nice,
+                France, pp. 581–588
+              </div>
+              <div class="pub-tags">
+                <span class="tag tag-amber">Tier 1 A★</span
+                ><span class="tag tag-accent">Conference</span
+                ><span class="tag tag-teal">Chatbots</span
+                ><span class="tag tag-teal">Messaging</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >30+
+            </div>
+          </div>
+
+          <div class="pub-item reveal" data-tags="journal voice privacy">
+            <div class="pub-yr">2020</div>
+            <div class="pub-body">
+              <div class="pub-title">
+                Smart home personal assistants: A security and privacy review
+              </div>
+              <div class="pub-venue">ACM Computing Surveys, vol. 53, no. 6</div>
+              <div class="pub-tags">
+                <span class="tag tag-green">Journal · IF 23.8</span
+                ><span class="tag tag-teal">Survey</span
+                ><span class="tag tag-teal">Smart home</span
+                ><span class="tag tag-teal">Privacy</span>
+              </div>
+            </div>
+            <div class="pub-cited">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"
+                /></svg
+              >380+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Career</p>
+        <h2 class="reveal">Experience <span>&amp; education</span></h2>
+        <div class="tl-wrap">
+          <div>
+            <div class="tl-col-title reveal">Employment</div>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-period">2023 — present</div>
+                <div class="tl-role">Lecturer in Cybersecurity</div>
+                <div class="tl-place">University of Strathclyde, Glasgow</div>
+                <div class="tl-detail">
+                  Leading AI security research, teaching postgraduate
+                  cybersecurity modules, supervising 6 PhD students, and serving
+                  as Strathclyde Academic Lead for EC-Council and CIISec
+                  partnerships.
                 </div>
-                
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section>
-
-    <!-- Service Section
-    ================================================== -->
-    <section id="whatIdo">
-        <div class="container"> <!-- container -->
-
-            <div class="section-header">
-                <h2>What I <span class="highlight"><strong>Do</strong></span></h2>
-                <h5><em>Lorem Ipsum is simply dummy text of the printing and typesetting.</em></h5>
-                <div class="fancy"><span></span></div>
-            </div>
-
-            <div class="row"> <!-- row -->
-                
-                <div class="col-md-6 text-right">  <!-- Left Content Col 6 -->
-                    <img src="img/design.jpg" class="intro-logo img-responsive" alt="free-template">
-                </div> <!-- End Left Content Col 6 -->
-
-                <div class="col-md-6"> <!-- Right Content Col 6 -->
-				  
-                    <div class="media service"> <!-- Service #4 -->
-                        <div class="media-left media-middle">
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Web & App Design</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        </div>
-                    </div><!-- end Service #4 -->
-
-                    <div class="media service"> <!-- Service #5 -->
-                        <div class="media-left media-middle">
-                            <i class="fa fa-android"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Web Development</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        </div>
-                    </div> <!-- end Service #5 -->
-
-                    <div class="media service"> <!-- Service #6 -->
-                        <div class="media-left media-middle">
-                            <i class="fa fa-apple"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Mobile Development</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        </div>
-                    </div> <!-- end Service #6 -->
-                </div><!-- end Right Content Col 6 -->
-                
-            </div><!-- end row -->
-
-        </div><!-- end container -->
-    </section>
-
-    <!-- About Us Section
-    ================================================== -->
-	
-	<section id="about">
- <div class="container"> <!-- container -->
-            <div class="section-header">
-                <h2>Who Am I <span class="highlight"><strong>John</strong></span></h2>
-                <h5><em>Lorem Ipsum is simply dummy text of the printing and typesetting.</em></h5>
-                <div class="fancy"><span></span></div>
-            </div>
-        </div><!-- end container -->	
-	<div class="container">
-	
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-1 scrollimation fade-right in">
-				<img class="img-responsive img-circle img-center" src="img/about.jpg" alt="">
-			</div>
-			<div class="col-sm-6 col-sm-offset-1 scrollimation fade-left in">
-				<h1>Hello, I am John Doe...</h1>
-				<p>I am Jonathan Doe, a 26 year old UI designer/developer from NY. I have graduated with a Bachelor degree of UI Design & Development, from the University of America. I have a passion for creating beautiful designs for a products. I have been awareded for the best designer in March 2015.</p>
-				
-			</div>
-		</div><!--End row -->
-		
-	</div><!--End container -->
-	
-            <div id="counter" class="text-center">
-                <div class="container">
-                    <div class="row"> <!-- Row -->
-                      <div class="col-md-6">
-					     <div class="row">
-						      <div class="counter"> 
-
-                          <div class="col-xs-6 facts"><!-- counter #1 -->
-                            <div class="count-box"> 
-                                <i class="fa fa-mobile"></i>
-                                <h4 class="count">420</h4>
-                                <p class="small">Mobile Apps</p>
-                            </div> 
-                          </div><!-- end counter #1 -->
-
-                          <div class="col-xs-6 facts"><!-- counter #2 -->
-                            <div class="count-box">
-                              <i class="fa fa-user"></i>
-                              <h4 class="count">625</h4>
-                              <p class="small">Web Apps</p>
-                            </div>
-                          </div>
-						  </div>
-						  </div>
-						  <div class="row">	
-							<div class="counter"> 						  
-                          <div class="col-xs-6 facts"> <!-- counter #3 -->
-                            <div class="count-box">
-                              <i class="fa fa-arrows"></i>
-                              <h4 class="count">805</h4>
-                              <p class="small">UI Designs</p>
-                            </div>
-                          </div>
-
-                          <div class="col-xs-6 facts"> <!-- counter #4 -->
-                            <div class="count-box">
-                              <i class="fa fa-download"></i>
-                              <h4 class="count">152</h4>
-                              <p class="small">Project</p>
-                            </div>
-                          </div>
- 
-                          </div>
-
-                        </div>
-
-						 </div> 
-					    <div class="col-md-6"><!-- right content col 6 -->
-                        <div> <!-- right content wrapper -->
- 
-                            
-                            <div class="skills"> <!-- skills progress bar -->
-                                <div class="skillset"> <!-- skill #1 -->
-                                    <p>UI/UX Design</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                            <span class="sr-only">90% Complete</span>
-                                        </div>
-                                    </div>
-                                </div><!-- end skill #1 -->
-
-                                <div class="skillset"> <!-- skill #2 -->
-                                    <p>HTML5, CSS3, SASS</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                            <span class="sr-only">85% Complete</span>
-                                        </div>
-                                    </div>
-                                </div><!-- end skill #2 -->
-
-                                <div class="skillset"> <!-- skill #3 -->
-                                    <p>WordPress</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 89%;">
-                                            <span class="sr-only">99% Complete</span>
-                                        </div>
-                                    </div>
-                                </div> <!-- end skill #3 -->
-
-                                <div class="skillset"> <!-- skill #4 -->
-                                    <p>Graphic Design</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                            <span class="sr-only">70% Complete</span>
-                                        </div>
-                                    </div>
-                                </div> <!-- end skill #4 -->
-
-                                <div class="skillset"> <!-- skill #5 -->
-                                    <p>Development</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                            <span class="sr-only">50% Complete</span>
-                                        </div>
-                                    </div>
-                                </div><!-- end skill #4 -->
-                            </div> <!-- end skills progress bar -->
-
-                        </div><!-- end right content wrapper -->
-                    </div><!-- end right content col 6 -->
-                       
-                      </div> <!-- End Row -->
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-period">2022 — 2023</div>
+                <div class="tl-role">
+                  Postdoctoral Researcher — Cyber Risk Analyst
                 </div>
+                <div class="tl-place">Alan Turing Institute, UK</div>
+                <div class="tl-detail">
+                  Cyber risk analysis and AI security research at the UK's
+                  national institute for data science and AI.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-period">2020 — 2022</div>
+                <div class="tl-role">Research Assistant</div>
+                <div class="tl-place">
+                  Department of Informatics, King's College London
+                </div>
+                <div class="tl-detail">
+                  Built SkillVet — an automated ML tool for privacy assessment.
+                  Made responsible disclosure to Amazon for 675
+                  privacy-violating Alexa skills. ICO-funded project.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d3">
+                <div class="tl-period">2018 — 2022</div>
+                <div class="tl-role">Teaching Assistant &amp; Tutor</div>
+                <div class="tl-place">
+                  King's College London / Brilliant Club
+                </div>
+                <div class="tl-detail">
+                  Small- and large-group instruction across network security,
+                  cryptography, and computer forensics modules.
+                </div>
+              </div>
             </div>
-
-</section>
-	 
-    <!-- Works Section
-    ================================================== -->
-    <section id="works">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Works</h2>
-                <h5><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry</em></h5>
-                <div class="fancy"><span></span></div>
+          </div>
+          <div>
+            <div class="tl-col-title reveal">Education</div>
+            <div class="timeline">
+              <div class="tl-item reveal">
+                <div class="tl-period">2018 — 2022</div>
+                <div class="tl-role">Ph.D. Computer Science</div>
+                <div class="tl-place">King's College London, UK</div>
+                <div class="tl-detail">
+                  Thesis: Assessing and Measuring the Privacy Practices of Voice
+                  Assistant Applications. Fully funded by £130,000 PTDF
+                  Scholarship.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d1">
+                <div class="tl-period">2014 — 2015</div>
+                <div class="tl-role">M.Sc. Cybersecurity</div>
+                <div class="tl-place">Lancaster University, UK</div>
+                <div class="tl-detail">
+                  Advanced exposure to cybersecurity with a research project on
+                  cloud computing. Funded by £30,000 NITDEF Scholarship.
+                </div>
+              </div>
+              <div class="tl-item reveal reveal-d2">
+                <div class="tl-period">2005 — 2010</div>
+                <div class="tl-role">B.Sc. Computer Science</div>
+                <div class="tl-place">Olabisi Onabanjo University, Nigeria</div>
+                <div class="tl-detail">
+                  Core computer science curriculum with a final-year project on
+                  object-oriented programming languages.
+                </div>
+              </div>
             </div>
-
-            <div class="text-center">
-                <ul class="list-inline cat"> <!-- Portfolio Filter Categories -->
-                    <li><a href="#" data-filter="*" class="active">All</a></li>
-                    <li><a href="#" data-filter=".brand">Design</a></li>
-                    <li><a href="#" data-filter=".web">Web</a></li>
-                    <li><a href="#" data-filter=".app">Apps</a></li>
-                    <li><a href="#" data-filter=".others">Others</a></li>
-                </ul><!-- End Portfolio Filter Categories -->
-            </div>
-
-        </div><!-- End Container -->
-
-        <div class="container-fluid"> <!-- fluid container -->
-             <div id="itemsWork" class="row text-center"> <!-- Portfolio Wrapper Row -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding brand others"> <!-- Works #1 col 3 -->
-                    <div class="box"> 
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Logo Identity Design" href="img/portfolio/01.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/01.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a> <!-- change # with your url to link it to another page -->
-                            </div> 
-                            <img src="img/portfolio/01.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div><!-- end Works #1 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding apps"> <!-- Works #2 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Mobile Application" href="img/portfolio/02.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/02.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/02.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div><!-- end Works #2 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding others brand"><!-- Works #3 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/03.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/03.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/03.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div><!-- end Works #3 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding others web"> <!-- Works #4 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/04.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/04.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/04.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div> <!-- end Works #4 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 nopadding web others"> <!-- Works #5 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/05.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/05.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/05.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div> <!-- end Works #5 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 nopadding app">  <!-- Works #6 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/06.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/06.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/06.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div><!-- end Works #6 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 nopadding web brand"><!-- Works #7 col 3 -->
-                    <div class="box">
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/07.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/07.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/07.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div>
-                    </div>
-                </div><!-- end Works #7 col 3 -->
-
-                <div class="col-xs-12 col-sm-6 col-md-3 nopadding app"> <!-- Works #8 col 3 -->
-                    <div class="box"> 
-                        <div class="hover-bg">
-                            <div class="hover-text off">
-                                <a title="Freedom Project #1" href="img/portfolio/08.jpg" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/portfolio/08.jpg">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="#"><i class="fa fa-chain"></i></a><!-- change # with your url to link it to another page -->
-                            </div>
-                            <img src="img/portfolio/08.jpg" class="img-responsive" alt="Image"> <!-- Portfolio Image -->
-                        </div> 
-                    </div>
-                </div> <!-- end Works #8 col 3 -->
-                
-            </div> <!-- End Row -->
-
-        </div> <!-- End Container-Fluid -->
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- experience Section
-    ================================================== -->
-    <section id="experience">
-        <div class="container"> <!-- container -->
-            <div class="section-header">
-                <h2>My Experience</h2>
-                <h5><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry</em></h5>
-                <div class="fancy"><span></span></div>
+    <!-- ═══ TEACHING ═══ -->
+    <section id="teaching" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Teaching</p>
+        <h2 class="reveal">Courses <span>&amp; supervision</span></h2>
+        <div class="teaching-metrics reveal">
+          <div class="tm-card">
+            <div class="tm-n">22</div>
+            <div class="tm-l">MSc dissertations</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">6</div>
+            <div class="tm-l">BSc dissertations</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">6</div>
+            <div class="tm-l">Current PhD students</div>
+          </div>
+          <div class="tm-card">
+            <div class="tm-n">FHEA</div>
+            <div class="tm-l">HEA Fellow</div>
+          </div>
+        </div>
+        <div class="course-tabs reveal">
+          <button class="ct-btn active" data-tab="strath">Strathclyde</button>
+          <button class="ct-btn" data-tab="kcl">King's College London</button>
+        </div>
+        <div class="courses-pane active" id="tab-strath">
+          <div class="course-card">
+            <div class="course-code">CS885</div>
+            <div>
+              <div class="course-name">
+                Vulnerability Assessment and Security Testing
+              </div>
+              <div class="course-meta">≈ 40 students · 2025–present</div>
             </div>
-        </div><!-- end container -->
-
-        <div class="gray-bg"> <!-- fullwidth gray background -->
-            <div class="container"><!-- container --> 
-                <div id="experience" class="row"> <!-- row -->
-
-                    <div class="col-md-10 col-md-offset-1">
-
-                        <div class="media experience"> <!-- experience #1 -->
-                            <div class="media-right media-middle">
-                                <i class="fa fa-facebook"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Facebook</h4>
-								<h5>2011 to Present</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio.</p>
-                            </div>
-                        </div><!-- experience #1 -->
-
-                        <div class="media experience"> <!-- experience #2 -->
-                            <div class="media-right media-middle">
-                                <i class="fa fa-google-plus"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Google Dev</h4>
-								<h5>2007 to 2011</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio.</p>
-                            </div>
-                        </div><!-- experience #2 -->
-
-                        <div class="media experience"> <!-- experience #3 -->
-                            <div class="media-right media-middle">
-                                <i class="fa fa-yahoo"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Yahoo Inc</h4>
-								<h5>2004 to 2007</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio.</p>
-                            </div>
-                        </div><!-- experience #3 -->
-
-                        <div class="media experience"> <!-- experience #4 -->
-                            <div class="media-right media-middle">
-                                <i class="fa fa-linkedin"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">LinkedIn</h4>
-								<h5>2001 to 2004</h5>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, sem auctor, molestie diam dictum aliquam. Dolor leo, ridiculus est ut cubilia nec, fermentum arcu praesent, pede etiam. Tempor vestibulum turpis id ligula mi mattis. Eget arcu vitae mauris amet odio.</p>
-                            </div>
-                        </div><!-- experience #4 -->
-                        
-                    </div>
-
-                </div> <!-- end row -->
-            </div><!-- end container -->
-        </div>  <!-- end fullwidth gray background -->
-    </section>
-
-    
-    <!-- Contact Section
-    ================================================== -->
-    <section id="contact">
-
-        <div class="container"> <!-- container -->
-            <div class="section-header">
-                <h2>Keep In Touch With ME</h2>
-                <h5><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry</em></h5>
-                <div class="fancy"><span></span></div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS810</div>
+            <div>
+              <div class="course-name">
+                Compliance and Operational Security Management
+              </div>
+              <div class="course-meta">≈ 21 students · 2023–present</div>
             </div>
-        </div><!-- end container -->
- 
-        <div class="container"><!-- container -->
-            <div class="row"> <!-- outer row -->
-                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                    <div class="row"> <!-- nested row -->
-
-                        <!-- contact detail using col 4 -->
-                        <div class="col-md-4">  
-                            <div class="contact-detail">
-                                <i class="fa fa-map-marker"></i>
-                                <h4>#150-25, James Street, NewYork</h4> <!-- address -->
-                            </div>
-                        </div>
-                        <!-- contact detail using col 4 -->
-                        <div class="col-md-4">
-                            <div class="contact-detail">
-                                <i class="fa fa-envelope-o"></i>
-                                <h4>johndoe@gmail.com</h4><!-- email add -->
-                            </div>
-                        </div>
-
-                        <!-- contact detail using col 4 -->
-                        <div class="col-md-4">
-                            <div class="contact-detail">
-                                <i class="fa fa-phone"></i>
-                                <h4>+123 4567 8912</h4> <!-- phone no. -->
-                            </div>
-                        </div>
-
-                    </div> <!-- end nested row -->
-                </div> <!-- end col 10 with offset 1 to centered -->
-            </div><!-- end outer row -->
-
-            <div class="row text-center"> <!-- contact form outer row with centered text-->
-                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                    <form id="contact-form" class="form" name="sentMessage" novalidate> <!-- form wrapper -->
-
-                        <div class="row"> <!-- nested inner row -->
-
-                            <!-- Input your name -->
-                            <div class="col-md-4">
-                                <div class="form-group"> <!-- Your name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            <!-- Input your email -->
-                            <div class="col-md-4">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="email" autocomplete="off" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            <!-- Input your Phone no. -->
-                            <div class="col-md-4">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your Phone No. *" id="phone" required data-validation-required-message="Please enter your phone no.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                        </div><!-- end nested inner row -->
-
-                        <!-- Message Text area -->
-                        <div class="form-group"> <!-- Your email input -->
-                            <textarea class="form-control" rows="7" placeholder="Tell Us Something..." id="message" required data-validation-required-message="Please enter a message."></textarea>
-                            <p class="help-block text-danger"></p>
-                            <div id="success"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn color">Send Message</button> <!-- Send button -->
-
-                    </form><!-- end form wrapper -->
-                </div><!-- end col 10 with offset 1 to centered -->
-            </div> <!-- end contact form outer row with centered text-->
-
-        </div><!-- end container -->
-
+          </div>
+          <div class="course-card">
+            <div class="course-code">CS807</div>
+            <div>
+              <div class="course-name">
+                Graduate Apprenticeship — Vulnerability Assessment
+              </div>
+              <div class="course-meta">≈ 21 students · 2023–present</div>
+            </div>
+          </div>
+        </div>
+        <div class="courses-pane" id="tab-kcl">
+          <div class="course-card">
+            <div class="course-code">7CCSMNSE</div>
+            <div>
+              <div class="course-name">Network Security</div>
+              <div class="course-meta">≈ 30 students · 2019–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">6CCS3CIS</div>
+            <div>
+              <div class="course-name">
+                Cryptography and Information Security
+              </div>
+              <div class="course-meta">≈ 30 students · 2021–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">7CCSMCIS</div>
+            <div>
+              <div class="course-name">Computer Forensics and Cybercrime</div>
+              <div class="course-meta">≈ 30 students · 2019–2022</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">4CCS1FC1</div>
+            <div>
+              <div class="course-name">Foundational Computing</div>
+              <div class="course-meta">≈ 70 students · 2018–2021</div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-code">4CCS1PPA</div>
+            <div>
+              <div class="course-name">Introduction to Programming</div>
+              <div class="course-meta">≈ 80 students · 2018–2021</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer 
-    ================================================== -->
-    <section id="footer">
-        <div class="container"><!-- container -->
-		 <ul class="list-inline social pull-left">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link --> 
-                <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link --> 
-            </ul>
-            <p class="pull-right"> © 2016 Site Name. All rights reserved. Template by : <a href="http://webthemez.com">webthemez</a></p> <!-- copyright text here-->
-           
-        </div><!-- end container -->
+    <!-- ═══ AWARDS ═══ -->
+    <section id="awards" style="background: var(--bg2)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Funding &amp; recognition</p>
+        <h2 class="reveal">Awards <span>&amp; grants</span></h2>
+        <div class="awards-grid">
+          <div class="award-card reveal">
+            <div class="award-yr">2024</div>
+            <div class="award-title">
+              John Anderson Research Studentship Scheme (JARSS) Grant —
+              University of Strathclyde
+            </div>
+            <div class="award-amt" style="color: var(--accent)">JARSS</div>
+          </div>
+          <div class="award-card reveal reveal-d1">
+            <div class="award-yr">2023</div>
+            <div class="award-title">Strathclyde University Starter Grant</div>
+            <div class="award-amt">£10,000</div>
+          </div>
+          <div class="award-card reveal reveal-d2">
+            <div class="award-yr">2021</div>
+            <div class="award-title">
+              ICO Research Grant — Evaluating third-party smart home assistant
+              developers
+            </div>
+            <div class="award-amt">£45,000</div>
+          </div>
+          <div class="award-card reveal">
+            <div class="award-yr">2018</div>
+            <div class="award-title">
+              Petroleum Technology Development Fund (PTDF) Scholarship Award
+            </div>
+            <div class="award-amt">£130,000</div>
+          </div>
+          <div class="award-card reveal reveal-d1">
+            <div class="award-yr">2014</div>
+            <div class="award-title">
+              National Information Technology Development Education Trust Fund
+              (NITDEF) Scholarship
+            </div>
+            <div class="award-amt">£30,000</div>
+          </div>
+          <div
+            class="award-card reveal reveal-d2"
+            style="border-color: var(--border2)"
+          >
+            <div class="award-yr" style="color: var(--text3)">Pending</div>
+            <div class="award-title">
+              ARIA Grant — Framework for Embodied and Algorithmic Trust (FEAT):
+              AI, Physical Cryptography, and the Ethics of Secure Autonomy
+            </div>
+            <div
+              class="award-amt"
+              style="font-size: 1.1rem; color: var(--text2)"
+            >
+              £19,960
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
 
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" style="background: var(--bg)">
+      <div class="wrap">
+        <p class="section-kicker reveal">Get in touch</p>
+        <h2 class="reveal">Contact <span>&amp; links</span></h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Direct contact</h3>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:jide.edu@strath.ac.uk">jide.edu@strath.ac.uk</a>
+            </div>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Department of Computer and Information Sciences, University of
+              Strathclyde, Glasgow, UK
+            </div>
+            <div class="contact-row">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                />
+              </svg>
+              ORCID:
+              <a href="https://orcid.org/0000-0003-1325-8740" target="_blank"
+                >0000-0003-1325-8740</a
+              >
+            </div>
+            <div
+              style="
+                margin-top: 1.25rem;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+                target="_blank"
+                class="btn-primary"
+                style="font-size: 13px; padding: 8px 16px"
+                >Pure Portal ↗</a
+              >
+              <a
+                href="https://scholar.google.com"
+                target="_blank"
+                class="btn-outline"
+                style="font-size: 13px; padding: 8px 16px"
+                >Google Scholar ↗</a
+              >
+            </div>
+          </div>
+          <div class="contact-card reveal reveal-d1">
+            <h3>Professional memberships</h3>
+            <div class="memberships">
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Expert Fellow, SPRITE+ Security &amp; Privacy NetworkPlus
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Fellow of the Higher Education Academy (FHEA)
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Member, EPSRC Peer Review College
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot"></div>
+                Member, Research Innovation Scotland (RIS)
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--accent)"></div>
+                Member, RBOC (Resilience Beyond Observed Capabilities)
+                NetworkPlus
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--accent)"></div>
+                Member, CRANE Cyber Security Research Network
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--amber)"></div>
+                STEM Ambassador
+              </div>
+              <div class="mbr-item">
+                <div class="mbr-dot" style="background: var(--amber)"></div>
+                Centering Black Scholarship in STEM network
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- FOOTER -->
+    <div style="background: var(--bg2); border-top: 1px solid var(--border)">
+      <footer>
+        <span>© 2026 Jide Edu, Ph.D. · University of Strathclyde</span>
+        <div class="footer-links">
+          <a
+            href="https://pureportal.strath.ac.uk/en/persons/jide-edu"
+            target="_blank"
+            >Pure Portal</a
+          >
+          <a href="https://orcid.org/0000-0003-1325-8740" target="_blank"
+            >ORCID</a
+          >
+          <a href="https://scholar.google.com" target="_blank"
+            >Google Scholar</a
+          >
+          <a href="mailto:jide.edu@strath.ac.uk">Email</a>
+        </div>
+      </footer>
+    </div>
 
-    <script type="text/javascript" src="js/owl.carousel.js"></script><!-- Owl Carousel Plugin -->
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+      // ─── THEME TOGGLE ───
+      const root = document.documentElement;
+      const btn = document.getElementById("theme-toggle");
+      const navToggle = document.getElementById("nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        btn.textContent = next === "dark" ? "☀" : "☾";
+        updateChart();
+      });
+      navToggle?.addEventListener("click", () => {
+        navLinks?.classList.toggle("open");
+      });
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () =>
+          navLinks?.classList.remove("open"),
+        );
+      });
 
-    <script type="text/javascript" src="js/SmoothScroll.js"></script> 
+      // ─── HERO CANVAS PARTICLES ───
+      (function () {
+        const canvas = document.getElementById("hero-canvas");
+        const ctx = canvas.getContext("2d");
+        let W,
+          H,
+          particles = [];
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = canvas.parentElement.offsetHeight;
+        }
+        resize();
+        window.addEventListener("resize", () => {
+          resize();
+          init();
+        });
+        function Particle() {
+          this.x = Math.random() * W;
+          this.y = Math.random() * H;
+          this.vx = (Math.random() - 0.5) * 0.3;
+          this.vy = (Math.random() - 0.5) * 0.3;
+          this.r = Math.random() * 1.5 + 0.5;
+        }
+        function init() {
+          particles = [];
+          for (let i = 0; i < 80; i++) particles.push(new Particle());
+        }
+        init();
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          const isDark = root.dataset.theme !== "light";
+          particles.forEach((p) => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) p.x = W;
+            if (p.x > W) p.x = 0;
+            if (p.y < 0) p.y = H;
+            if (p.y > H) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = isDark
+              ? "rgba(79,142,255,0.35)"
+              : "rgba(79,142,255,0.2)";
+            ctx.fill();
+          });
+          // connections
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x,
+                dy = particles[i].y - particles[j].y;
+              const d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 120) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = isDark
+                  ? `rgba(79,142,255,${0.12 * (1 - d / 120)})`
+                  : `rgba(79,142,255,${0.07 * (1 - d / 120)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(draw);
+        }
+        draw();
+      })();
 
-    <!-- Parallax Effects -->
-    <script type="text/javascript" src="js/skrollr.js"></script>
-    <script type="text/javascript" src="js/imagesloaded.js"></script>
+      // ─── COUNTER ANIMATION ───
+      function animateCounter(el, target, suffix = "", duration = 1600) {
+        const isString = typeof target === "string";
+        if (isString) {
+          el.textContent = target;
+          return;
+        }
+        let start = 0,
+          startTime = null;
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          const p = Math.min((ts - startTime) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 4);
+          const val = Math.floor(ease * target);
+          el.innerHTML = val + (suffix ? `<span>${suffix}</span>` : "");
+          if (p < 1) requestAnimationFrame(step);
+          else el.innerHTML = target + (suffix ? `<span>${suffix}</span>` : "");
+        }
+        requestAnimationFrame(step);
+      }
+      let counted = false;
+      function runCounters() {
+        if (counted) return;
+        counted = true;
+        animateCounter(document.getElementById("cnt-citations"), 480, "+");
+        animateCounter(document.getElementById("cnt-pubs"), 9, "");
+        animateCounter(document.getElementById("cnt-phd"), 6, "");
+        animateCounter(document.getElementById("cnt-funding"), 225, "k+");
+      }
 
-    <!-- Portfolio Filter -->
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+      // ─── SCROLL REVEAL + NAV + BACK-TO-TOP ───
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              if (e.target.closest("#hero")) runCounters();
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
 
-    <!-- LightBox Nivo -->
-    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+      window.addEventListener("scroll", () => {
+        const btt = document.getElementById("btt");
+        btt.classList.toggle("show", window.scrollY > 600);
+        // active nav
+        const sections = [
+          "research",
+          "publications",
+          "experience",
+          "teaching",
+          "awards",
+          "contact",
+        ];
+        let cur = "";
+        sections.forEach((id) => {
+          const sec = document.getElementById(id);
+          if (sec && sec.getBoundingClientRect().top <= 80) cur = id;
+        });
+        document.querySelectorAll(".nav-links a").forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
+        });
+      });
 
-    <!-- Contact page-->
-    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="js/contact.js"></script>
+      // ─── PUB FILTERS ───
+      document.querySelectorAll(".pf-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".pf-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          const f = this.dataset.filter;
+          document.querySelectorAll(".pub-item").forEach((item) => {
+            const tags = item.dataset.tags || "";
+            if (f === "all" || tags.includes(f)) {
+              item.classList.remove("hidden");
+            } else {
+              item.classList.add("hidden");
+            }
+          });
+        });
+      });
 
-    <!-- Javascripts
-    ================================================== -->
-    <script type="text/javascript" src="js/main.js"></script>
+      // ─── COURSE TABS ───
+      document.querySelectorAll(".ct-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".ct-btn")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".courses-pane")
+            .forEach((p) => p.classList.remove("active"));
+          this.classList.add("active");
+          document
+            .getElementById("tab-" + this.dataset.tab)
+            .classList.add("active");
+        });
+      });
 
+      // ─── CITATION CHART ───
+      let citChart = null;
+      function getChartColors() {
+        const isDark = root.dataset.theme !== "light";
+        return {
+          line: isDark ? "rgba(79,142,255,1)" : "rgba(59,119,228,1)",
+          fill: isDark ? "rgba(79,142,255,0.15)" : "rgba(79,142,255,0.08)",
+          grid: isDark ? "rgba(99,152,255,0.08)" : "rgba(0,0,0,0.05)",
+          text: isDark ? "rgba(154,170,200,0.8)" : "rgba(61,79,114,0.8)",
+          point: isDark ? "#4F8EFF" : "#3B77E4",
+        };
+      }
+      function buildChart() {
+        const c = getChartColors();
+        const ctx = document.getElementById("citation-chart").getContext("2d");
+        if (citChart) citChart.destroy();
+        citChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["2020", "2021", "2022", "2023", "2024", "2025", "2026"],
+            datasets: [
+              {
+                label: "Citations",
+                data: [12, 35, 95, 195, 340, 445, 480],
+                borderColor: c.line,
+                borderWidth: 2,
+                backgroundColor: c.fill,
+                fill: true,
+                tension: 0.45,
+                pointBackgroundColor: c.point,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: "rgba(15,23,42,0.9)",
+                titleColor: "#e8eeff",
+                bodyColor: "#9aaac8",
+                borderColor: "rgba(79,142,255,0.3)",
+                borderWidth: 1,
+                padding: 10,
+                callbacks: { label: (ctx) => `${ctx.parsed.y} citations` },
+              },
+            },
+            scales: {
+              x: {
+                grid: { color: c.grid },
+                ticks: {
+                  color: c.text,
+                  font: { size: 11, family: "'DM Sans',sans-serif" },
+                },
+              },
+              y: {
+                grid: { color: c.grid },
+                ticks: {
+                  color: c.text,
+                  font: { size: 11, family: "'DM Sans',sans-serif" },
+                },
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+      function updateChart() {
+        setTimeout(buildChart, 50);
+      }
+      window.addEventListener("load", buildChart);
+    </script>
   </body>
 </html>
